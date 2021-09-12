@@ -5,11 +5,14 @@ import { SiniestrosComponent } from './pages/siniestros/siniestros.component';
 import { HomeComponent } from './pages/home/home.component';
 import { AppComponent } from './app.component';
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
+import { SiniestrosAddComponent } from './pages/siniestros-add/siniestros-add.component';
+import { SiniestrosUpdateComponent } from './pages/siniestros-update/siniestros-update.component';
 
 import { AppRoutingModule } from './app-routing/app-routing.module';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+
 
 export function rootLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, 'assets/i18n/', '.json');
@@ -21,6 +24,8 @@ export function rootLoaderFactory(http: HttpClient) {
     HomeComponent,
     NavMenuComponent,
     SiniestrosComponent,
+    SiniestrosAddComponent,
+    SiniestrosUpdateComponent,
   ],
   imports: [
     HttpClientModule,
