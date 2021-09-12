@@ -16,13 +16,14 @@
                   <span class="d-none d-lg-inline">Idioma</span> 
                 </button>
                 <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="bd-versions">
-                  <li><a class="dropdown-item current" aria-current="true" href="#">Español</a></li>
+                  <li><a class="dropdown-item current" aria-current="true"(click)="changeLang('es')">Español</a></li>
                   <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item current" aria-current="true" href="#">Ingles</a></li>
+                  <li><a class="dropdown-item current" aria-current="true" (click)="changeLang('en')">Ingles</a></li>
                 </ul>
               </div>
           </ul>
         </div>
       </div>
     </nav>
+    <p translate>Siniestros.title</p>
   </header>
