@@ -50,14 +50,7 @@ export class AddSiniestroComponent implements OnInit {
     }
 
   ngOnInit(): void {
-    // this.route.params.pipe(switchMap((params: Params) => { 
-    //   return this.siniestroservice.getSiniestro(+params['id']);
-    //  }))
-    // .subscribe(siniestro => { 
-    //   this.siniestro = siniestro; 
-    //   this.siniestrocopy = siniestro;
-    // },
-    //   errmess => this.errMess = <any>errmess);
+
   }
   createForm() {
     this.siniestroForm = this.cm.group({
