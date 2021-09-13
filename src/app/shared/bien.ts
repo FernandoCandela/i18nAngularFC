@@ -1,4 +1,4 @@
 export class Bien {
-  bien!: string;
+  nombre!: string;
   valor!: number;
 }
