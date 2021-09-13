@@ -6,7 +6,6 @@ import { RouterModule } from '@angular/router';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { AddSiniestroComponent } from './siniestros/add-siniestro/add-siniestro.component';
 import { EditSiniestroComponent } from './siniestros/edit-siniestro/edit-siniestro.component';
-import { DeleteSiniestroComponent } from './siniestros/delete-siniestro/delete-siniestro.component';
 import { ViewSiniestroComponent } from './siniestros/view-siniestro/view-siniestro.component';
 import { ListSiniestroComponent } from './siniestros/list-siniestro/list-siniestro.component';
 import { TranslateModule } from '@ngx-translate/core';
@@ -27,7 +26,6 @@ import {MatNativeDateModule} from '@angular/material/core';
     NavMenuComponent,
     AddSiniestroComponent,
     EditSiniestroComponent,
-    DeleteSiniestroComponent,
     ViewSiniestroComponent,
     ListSiniestroComponent,
   ],
@@ -51,7 +49,6 @@ import {MatNativeDateModule} from '@angular/material/core';
   exports: [
     NavMenuComponent,
     EditSiniestroComponent,
-    DeleteSiniestroComponent,
     ViewSiniestroComponent,
     ListSiniestroComponent,
   ],

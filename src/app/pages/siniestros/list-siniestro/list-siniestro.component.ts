@@ -3,6 +3,7 @@ import { SiniestroService } from '../../../services/siniestro.service';
 import { Siniestro } from '../../../shared/siniestro';
 import { MatTableDataSource } from '@angular/material/table';
 // import swal from 'sweetalert2';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-list-siniestro',
@@ -37,9 +38,11 @@ export class ListSiniestroComponent implements OnInit {
     const filterValue = (event.target as HTMLInputElement).value;
     this.dataSource.filter = filterValue.trim().toLowerCase();
   }
-  async DeletePersonal(idPersonal: string) {
-    // await this.servicio.DeletePersonal(idPersonal);
-    // swal.fire('Exito!', 'Se elimino los datos exitosamente!', 'success');
-    // this.ngOnInit();
+  async DeletePersonal(id: string) {
+    this.SiniestroService.DeleteSiniestro(+id).subscribe(
+      (errmess) => (this.errMess = <any>errmess)
+    );
+    Swal.fire('Exito!', 'Se elimino los datos exitosamente!', 'success');
+    this.ngOnInit();
   }
 }

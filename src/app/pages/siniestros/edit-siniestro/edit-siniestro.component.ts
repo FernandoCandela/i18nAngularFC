@@ -4,6 +4,7 @@ import { SiniestroService } from '../../../services/siniestro.service';
 import { Router, Params, ActivatedRoute } from '@angular/router';
 import { FormBuilder, FormGroup, Validators, FormControl } from '@angular/forms';
 import { Siniestro } from '../../../shared/siniestro';
+import swal from 'sweetalert2';
 
 @Component({
   selector: 'app-edit-siniestro',
@@ -103,6 +104,7 @@ export class EditSiniestroComponent implements OnInit {
     this.siniestroservice.putSiniestro(this.siniestro).subscribe(siniestro => {this.savedsiniestro = siniestro},
       errmess => { this.siniestro == null; this.errMess = <any>errmess;});
     console.log(this.siniestro);
+    swal.fire('Exito!', 'Se actualizo el siniestro correctamente!', 'success');
     this.router.navigate(['/list']);
     
   }

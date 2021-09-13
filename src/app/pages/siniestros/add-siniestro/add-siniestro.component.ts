@@ -5,6 +5,7 @@ import { Siniestro } from '../../../shared/siniestro';
 import { SiniestroService } from '../../../services/siniestro.service';
 import { switchMap } from 'rxjs/operators';
 import Swal from 'sweetalert2'
+import swal from 'sweetalert2';
 
 @Component({
   selector: 'app-add-siniestro',
@@ -99,6 +100,7 @@ export class AddSiniestroComponent implements OnInit {
       estimacion: '',
       tipo:''
     });
+    swal.fire('Exito!', 'Se registro el siniestro correctamente!', 'success');
     this.router.navigate(['/list']);
     
   }
