@@ -10,6 +10,12 @@ import { DeleteSiniestroComponent } from './siniestros/delete-siniestro/delete-s
 import { ViewSiniestroComponent } from './siniestros/view-siniestro/view-siniestro.component';
 import { ListSiniestroComponent } from './siniestros/list-siniestro/list-siniestro.component';
 import { TranslateModule } from '@ngx-translate/core';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatTableModule } from '@angular/material/table';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatButtonModule} from '@angular/material/button';
+
 @NgModule({
   declarations: [
     NavMenuComponent,
@@ -19,7 +25,17 @@ import { TranslateModule } from '@ngx-translate/core';
     ViewSiniestroComponent,
     ListSiniestroComponent,
   ],
-  imports: [CommonModule, RouterModule, MatToolbarModule, TranslateModule],
+  imports: [
+    CommonModule,
+    RouterModule,
+    MatToolbarModule,
+    TranslateModule,
+    MatFormFieldModule,
+    MatTableModule,
+    MatInputModule,
+    BrowserAnimationsModule,
+    MatButtonModule
+  ],
   exports: [
     NavMenuComponent,
     EditSiniestroComponent,

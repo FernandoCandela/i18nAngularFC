@@ -10,6 +10,6 @@ export const routes: Routes = [
   { path: 'view/:id', component: ViewSiniestroComponent },
   { path: 'list', component: ListSiniestroComponent },
   { path: 'delete/:id', component: DeleteSiniestroComponent },
-  { path: 'edite/:id', component: EditSiniestroComponent },
+  { path: 'edit/:id', component: EditSiniestroComponent },
   { path: '', redirectTo: '/list', pathMatch: 'full' },
 ];

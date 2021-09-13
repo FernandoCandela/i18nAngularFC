@@ -1,4 +1,70 @@
-<p translate>Siniestros.title</p>
-<div *ngFor="let item of ListSiniestros">
-    <p >{{item.compania}}</p>
+<div class="row" style="margin-top:10%;">
+
+  <div class="col-xl-12">
+    <div class="card mb-4">
+      <div class="card-header" translate>Lista de Siniestros</div>
+      <div class="card-body">
+        <div class="form-row">
+
+          <mat-form-field class="form-group col-md-4">
+            <mat-label>Filtro</mat-label>
+            <input matInput (keyup)="applyFilter($event)" placeholder="Filtro" #input>
+          </mat-form-field>
+
+          <div class="col-md-4 mb-3">
+            <button style="width: 100% ;" mat-raised-button color="primary"
+              [routerLink]="['/create']">Registrar Siniestro</button>
+          </div>
+
+        </div>
+        <table mat-table style="text-align-last: center;" [dataSource]="dataSource" class="mat-elevation-z8">
+
+          <ng-container matColumnDef="id">
+            <th mat-header-cell *matHeaderCellDef> Id </th>
+            <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+          </ng-container>
+
+          <ng-container matColumnDef="fecha">
+            <th mat-header-cell *matHeaderCellDef> Fecha </th>
+            <td mat-cell *matCellDef="let element"> {{element.fecha | date:'dd/MM/yyyy'}} </td>
+          </ng-container>
+
+          <ng-container matColumnDef="compania">
+            <th mat-header-cell *matHeaderCellDef> Compañia</th>
+            <td mat-cell *matCellDef="let element"> {{element.compania}} </td>
+          </ng-container>
+
+          <ng-container matColumnDef="estimacion">
+            <th mat-header-cell *matHeaderCellDef> Estimacion </th>
+            <td mat-cell *matCellDef="let element"> {{element.estimacion| currency: 'USD' }} </td>
+          </ng-container>
+
+          <ng-container matColumnDef="tipo">
+            <th mat-header-cell *matHeaderCellDef> Tipo</th>
+            <td mat-cell *matCellDef="let element"> {{element.tipo}} </td>
+          </ng-container>
+
+          <ng-container matColumnDef="acciones">
+            <th mat-header-cell *matHeaderCellDef> Acciones </th>
+            <td mat-cell *matCellDef="let element">
+              <button mat-raised-button  style="margin-right: 10px;" color="primary" [routerLink]="['/view', element.id]">Ver</button>
+              <button mat-raised-button style="margin-right: 10px;"color="accent" [routerLink]="['/edit', element.id]" >
+                Editar</button>
+              <button mat-raised-button color="warn" (click)="DeletePersonal(element.id)">Eliminar</button>
+            </td>
+          </ng-container>
+          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+          <tr class="mat-row" *matNoDataRow>
+            <td class="mat-cell" colspan="6">No hay resultados de  "{{input.value}}"</td>
+          </tr>
+        </table>
+
+      </div>
+
+    </div>
+
+  </div>
+
 </div>

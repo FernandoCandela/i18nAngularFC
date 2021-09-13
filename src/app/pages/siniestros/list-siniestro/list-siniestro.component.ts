@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { SiniestroService } from '../../../services/siniestro.service';
 import { Siniestro } from '../../../shared/siniestro';
+import { MatTableDataSource } from '@angular/material/table';
+// import swal from 'sweetalert2';
 
 @Component({
   selector: 'app-list-siniestro',
@@ -8,14 +10,36 @@ import { Siniestro } from '../../../shared/siniestro';
   styleUrls: ['./list-siniestro.component.scss'],
 })
 export class ListSiniestroComponent implements OnInit {
-  ListSiniestros!: Siniestro[];
+  siniestro: Siniestro[] = [];
   errMess!: string;
+  public displayedColumns: string[] = [
+    'id',
+    'fecha',
+    'compania',
+    'estimacion',
+    'tipo',
+    'acciones'
+  ];
+  public dataSource = new MatTableDataSource<Siniestro>();
   constructor(private SiniestroService: SiniestroService) {}
 
   ngOnInit(): void {
+    this.getListSiniestros();
+  }
+  getListSiniestros() {
     this.SiniestroService.getSiniestros().subscribe(
-      (ListSiniestros) => (this.ListSiniestros = ListSiniestros),
+      (ListSiniestros) => (this.dataSource.data = ListSiniestros),
       (errmess) => (this.errMess = <any>errmess)
     );
+  }
+
+  applyFilter(event: Event) {
+    const filterValue = (event.target as HTMLInputElement).value;
+    this.dataSource.filter = filterValue.trim().toLowerCase();
+  }
+  async DeletePersonal(idPersonal: string) {
+    // await this.servicio.DeletePersonal(idPersonal);
+    // swal.fire('Exito!', 'Se elimino los datos exitosamente!', 'success');
+    // this.ngOnInit();
   }
 }

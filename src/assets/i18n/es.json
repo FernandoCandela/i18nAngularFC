@@ -1,9 +1,21 @@
 {
-    "Siniestros": {
+    "create": {
       "title": "pagina home",
       "Welcome": "Bienvenido"
     },
-    "SiniestrosAdd": {
+    "view": {
+      "title": "TituloSA",
+      "Welcome": "BienvenidoSA"
+    },
+    "list": {
+      "title": "TituloSA",
+      "Welcome": "BienvenidoSA"
+    },
+    "delete": {
+      "title": "TituloSA",
+      "Welcome": "BienvenidoSA"
+    },
+    "edit": {
       "title": "TituloSA",
       "Welcome": "BienvenidoSA"
     }

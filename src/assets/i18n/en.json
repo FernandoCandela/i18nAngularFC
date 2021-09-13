@@ -1,10 +1,22 @@
 {
-  "Siniestros": {
-    "title": "homepage",
-    "Welcome": "Welcome"
+  "create": {
+    "title": "pagina homeEN",
+    "Welcome": "Bienvenido"
   },
-  "SiniestrosAdd": {
-    "title": "homepageSA",
-    "Welcome": "WelcomeSA"
+  "view": {
+    "title": "TituloEN",
+    "Welcome": "BienvenidoEN"
+  },
+  "list": {
+    "title": "TituloEN",
+    "Welcome": "BienvenidoEN"
+  },
+  "delete": {
+    "title": "TituloEN",
+    "Welcome": "BienvenidoEN"
+  },
+  "edit": {
+    "title": "TituloEN",
+    "Welcome": "BienvenidoEN"
   }
 }
