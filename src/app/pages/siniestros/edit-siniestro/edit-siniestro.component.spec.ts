@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SiniestrosAddComponent } from './siniestros-add.component';
+import { EditSiniestroComponent } from './edit-siniestro.component';
 
-describe('SiniestrosAddComponent', () => {
-  let component: SiniestrosAddComponent;
-  let fixture: ComponentFixture<SiniestrosAddComponent>;
+describe('EditSiniestroComponent', () => {
+  let component: EditSiniestroComponent;
+  let fixture: ComponentFixture<EditSiniestroComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ SiniestrosAddComponent ]
+      declarations: [ EditSiniestroComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(SiniestrosAddComponent);
+    fixture = TestBed.createComponent(EditSiniestroComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

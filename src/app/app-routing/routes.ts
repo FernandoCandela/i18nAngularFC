@@ -1,10 +1,15 @@
 import { Routes } from '@angular/router';
-import { HomeComponent } from '../pages/home/home.component';
-import { SiniestrosComponent } from '../pages/siniestros/siniestros.component';
-
+import { AddSiniestroComponent } from '../pages/siniestros/add-siniestro/add-siniestro.component';
+import { DeleteSiniestroComponent } from '../pages/siniestros/delete-siniestro/delete-siniestro.component';
+import { ViewSiniestroComponent } from '../pages/siniestros/view-siniestro/view-siniestro.component';
+import { ListSiniestroComponent } from '../pages/siniestros/list-siniestro/list-siniestro.component';
+import { EditSiniestroComponent } from '../pages/siniestros/edit-siniestro/edit-siniestro.component';
 
 export const routes: Routes = [
-  { path: 'home', component: HomeComponent },
-  { path: 'siniestros', component: SiniestrosComponent },
-  { path: '', redirectTo: '/siniestros', pathMatch: 'full' }
+  { path: 'create', component: AddSiniestroComponent },
+  { path: 'view/:id', component: ViewSiniestroComponent },
+  { path: 'list', component: ListSiniestroComponent },
+  { path: 'delete/:id', component: DeleteSiniestroComponent },
+  { path: 'edite/:id', component: EditSiniestroComponent },
+  { path: '', redirectTo: '/list', pathMatch: 'full' },
 ];

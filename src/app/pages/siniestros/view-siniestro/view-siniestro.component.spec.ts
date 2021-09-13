@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SiniestrosUpdateComponent } from './siniestros-update.component';
+import { ViewSiniestroComponent } from './view-siniestro.component';
 
-describe('SiniestrosUpdateComponent', () => {
-  let component: SiniestrosUpdateComponent;
-  let fixture: ComponentFixture<SiniestrosUpdateComponent>;
+describe('ViewSiniestroComponent', () => {
+  let component: ViewSiniestroComponent;
+  let fixture: ComponentFixture<ViewSiniestroComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ SiniestrosUpdateComponent ]
+      declarations: [ ViewSiniestroComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(SiniestrosUpdateComponent);
+    fixture = TestBed.createComponent(ViewSiniestroComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
