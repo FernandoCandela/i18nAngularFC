@@ -3,15 +3,15 @@
   <div class="col-xl-12">
       <mat-card>
         <mat-card-header>
-            <mat-card-title translate>Lista de Siniestros</mat-card-title>
+            <mat-card-title translate>list.titulo</mat-card-title>
         </mat-card-header>
         <mat-card-content>
 
         <div class="row">
         <div class="col-md-4">
           <mat-form-field class="form-group ">
-            <mat-label>Filtro</mat-label>
-            <input matInput (keyup)="applyFilter($event)" placeholder="Filtro" #input>
+            <mat-label translate>list.filtro</mat-label>
+            <input matInput (keyup)="applyFilter($event)" #input>
           </mat-form-field>
         </div>
         
@@ -20,7 +20,7 @@
         </div>
           <div class="col-md-4">
             <button style="width: 100% ;" mat-raised-button color="primary"
-              [routerLink]="['/create']">Registrar Siniestro</button>
+              [routerLink]="['/create']" [innerText]="'list.registrar'| translate"></button>
           </div>
 
         </div>
@@ -32,31 +32,31 @@
           </ng-container>
 
           <ng-container matColumnDef="fecha">
-            <th mat-header-cell *matHeaderCellDef> Fecha </th>
+            <th mat-header-cell *matHeaderCellDef translate> list.fecha </th>
             <td mat-cell *matCellDef="let element"> {{element.fecha | date:'dd/MM/yyyy'}} </td>
           </ng-container>
 
           <ng-container matColumnDef="compania">
-            <th mat-header-cell *matHeaderCellDef> Compañia</th>
+            <th mat-header-cell *matHeaderCellDef translate> list.compania</th>
             <td mat-cell *matCellDef="let element"> {{element.compania}} </td>
           </ng-container>
 
           <ng-container matColumnDef="estimacion">
-            <th mat-header-cell *matHeaderCellDef> Estimacion </th>
+            <th mat-header-cell *matHeaderCellDef translate> list.estimacion </th>
             <td mat-cell *matCellDef="let element"> {{element.estimacion| currency: 'USD' }} </td>
           </ng-container>
 
           <ng-container matColumnDef="tipo">
-            <th mat-header-cell *matHeaderCellDef> Tipo</th>
+            <th mat-header-cell *matHeaderCellDef translate> list.tipo</th>
             <td mat-cell *matCellDef="let element"> {{element.tipo}} </td>
           </ng-container>
 
-          <ng-container matColumnDef="acciones">
-            <th mat-header-cell *matHeaderCellDef> Acciones </th>
+          <ng-container matColumnDef="acciones" >
+            <th mat-header-cell *matHeaderCellDef translate> list.acciones </th>
             <td mat-cell *matCellDef="let element">
-              <button mat-raised-button  style="margin-right: 10px;" color="primary" [routerLink]="['/view', element.id]">Ver</button>
-              <button mat-raised-button style="margin-right: 10px;"color="accent" [routerLink]="['/edit', element.id]" >Editar</button>
-              <button mat-raised-button color="warn" (click)="DeletePersonal(element.id)">Eliminar</button>
+              <button mat-raised-button  style="margin-right: 10px;" color="primary" [routerLink]="['/view', element.id]" [innerText]="'list.ver'| translate"></button>
+              <button mat-raised-button style="margin-right: 10px;"color="accent" [routerLink]="['/edit', element.id]" [innerText]="'list.editar'| translate"></button>
+              <button mat-raised-button color="warn" (click)="DeletePersonal(element.id)"[innerText]="'list.eliminar'| translate"></button>
             </td>
           </ng-container>
           <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
