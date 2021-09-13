@@ -34,6 +34,17 @@ export class SiniestroService {
       .pipe(catchError(this.processHTTPMsgService.handleError));
 
   }
+  PushSiniestro(siniestro: Siniestro): Observable<Siniestro> {
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'Content-Type':  'application/json',
+        Authorization: 'my-auth-token'
+      })
+    };
+    return this.http.post<Siniestro>(baseURL + 'siniestros/', siniestro, httpOptions)
+      .pipe(catchError(this.processHTTPMsgService.handleError));
+
+  }
   
   DeleteSiniestro(id: number) {
     const httpOptions = {

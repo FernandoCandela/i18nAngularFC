@@ -19,6 +19,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatCardModule} from '@angular/material/card';
 import {MatListModule} from '@angular/material/list';
+import {MatSelectModule} from '@angular/material/select';
+import {MatNativeDateModule} from '@angular/material/core';
 
 @NgModule({
   declarations: [
@@ -42,7 +44,9 @@ import {MatListModule} from '@angular/material/list';
     ReactiveFormsModule,
     MatDatepickerModule,
     MatCardModule,
-    MatListModule
+    MatListModule,
+    MatSelectModule,
+    MatNativeDateModule
   ],
   exports: [
     NavMenuComponent,
