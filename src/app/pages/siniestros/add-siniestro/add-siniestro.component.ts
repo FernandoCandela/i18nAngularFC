@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild, Inject } from '@angular/core';
 import { Params, ActivatedRoute, Router } from '@angular/router';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { UntypedFormBuilder, UntypedFormGroup, Validators } from '@angular/forms';
 import { Siniestro } from '../../../shared/siniestro';
 import { SiniestroService } from '../../../services/siniestro.service';
 import { switchMap } from 'rxjs/operators';
@@ -16,7 +16,7 @@ export class AddSiniestroComponent implements OnInit {
   siniestro!: Siniestro;
   errMess!: string;
 
-  siniestroForm!: FormGroup;
+  siniestroForm!: UntypedFormGroup;
   savedsiniestro!: Siniestro;
 
   formErrors: { [char: string]: string } = {
@@ -46,7 +46,7 @@ export class AddSiniestroComponent implements OnInit {
 
   constructor(
     private siniestroservice: SiniestroService,
-    private cm: FormBuilder,private router: Router) {
+    private cm: UntypedFormBuilder,private router: Router) {
       this.createForm();
     }
 

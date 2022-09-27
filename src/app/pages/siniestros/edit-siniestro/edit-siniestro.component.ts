@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { switchMap } from 'rxjs/operators';
 import { SiniestroService } from '../../../services/siniestro.service';
 import { Router, Params, ActivatedRoute } from '@angular/router';
-import { FormBuilder, FormGroup, Validators, FormControl } from '@angular/forms';
+import { UntypedFormBuilder, UntypedFormGroup, Validators, FormControl } from '@angular/forms';
 import { Siniestro } from '../../../shared/siniestro';
 import swal from 'sweetalert2';
 
@@ -17,7 +17,7 @@ export class EditSiniestroComponent implements OnInit {
   errMess!: string;
   dataLoader : boolean = false;
 
-  siniestroForm!: FormGroup;
+  siniestroForm!: UntypedFormGroup;
   savedsiniestro!: Siniestro;
 
   formErrors: { [char: string]: string } = {
@@ -46,7 +46,7 @@ export class EditSiniestroComponent implements OnInit {
   };
   constructor(
     private siniestroservice: SiniestroService,
-    private cm: FormBuilder,private router: Router,
+    private cm: UntypedFormBuilder,private router: Router,
     private route: ActivatedRoute) {
       
     }
