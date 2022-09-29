@@ -1,0 +1,20 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-i18nangularfc-dev-204625-authRole",
+      "UnauthRoleArn": "arn:aws:iam::978404210480:role/amplify-i18nangularfc-dev-204625-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::978404210480:role/amplify-i18nangularfc-dev-204625-authRole",
+      "Region": "us-east-2",
+      "DeploymentBucketName": "amplify-i18nangularfc-dev-204625-deployment",
+      "UnauthRoleName": "amplify-i18nangularfc-dev-204625-unauthRole",
+      "StackName": "amplify-i18nangularfc-dev-204625",
+      "StackId": "arn:aws:cloudformation:us-east-2:978404210480:stack/amplify-i18nangularfc-dev-204625/893368a0-3f98-11ed-8fe3-0635e08e95ae",
+      "AmplifyAppId": "d7aqq50d0rmq9"
+    },
+    "categories": {
+      "auth": {
+        "insuranceApp": {}
+      }
+    }
+  }
+}

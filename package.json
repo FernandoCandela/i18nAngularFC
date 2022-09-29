@@ -23,6 +23,7 @@
     "@ngx-translate/core": "^13.0.0",
     "@ngx-translate/http-loader": "^6.0.0",
     "@popperjs/core": "^2.10.1",
+    "aws-amplify": "^4.3.36",
     "bootstrap": "^5.0.0-beta3",
     "jquery": "^3.6.0",
     "rxjs": "~6.6.0",
