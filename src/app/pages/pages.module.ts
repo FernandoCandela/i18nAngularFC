@@ -22,6 +22,7 @@ import {MatSelectModule} from '@angular/material/select';
 import {MatNativeDateModule} from '@angular/material/core';
 import { SignupComponent } from './signup/signup.component';
 import {FormsModule} from '@angular/forms';
+import { LoginComponent } from './login/login.component';
 @NgModule({
   declarations: [
     NavMenuComponent,
@@ -30,6 +31,7 @@ import {FormsModule} from '@angular/forms';
     EditSiniestroComponent,
     ViewSiniestroComponent,
     ListSiniestroComponent,
+    LoginComponent
   ],
   imports: [
     CommonModule,
@@ -55,6 +57,7 @@ import {FormsModule} from '@angular/forms';
     EditSiniestroComponent,
     ViewSiniestroComponent,
     ListSiniestroComponent,
+    LoginComponent
   ],
 })
 export class PagesModule {}
