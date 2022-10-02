@@ -3,11 +3,13 @@ import { AddSiniestroComponent } from '../pages/siniestros/add-siniestro/add-sin
 import { ViewSiniestroComponent } from '../pages/siniestros/view-siniestro/view-siniestro.component';
 import { ListSiniestroComponent } from '../pages/siniestros/list-siniestro/list-siniestro.component';
 import { EditSiniestroComponent } from '../pages/siniestros/edit-siniestro/edit-siniestro.component';
+import { SignupComponent } from '../pages/signup/signup.component';
 
 export const routes: Routes = [
   { path: 'create', component: AddSiniestroComponent },
+  { path: 'signup', component: SignupComponent },
   { path: 'view/:id', component: ViewSiniestroComponent },
   { path: 'list', component: ListSiniestroComponent },
   { path: 'edit/:id', component: EditSiniestroComponent },
-  { path: '', redirectTo: '/list', pathMatch: 'full' },
+  { path: '', redirectTo: '/signup', pathMatch: 'full' },
 ];

@@ -20,10 +20,12 @@ import {MatCardModule} from '@angular/material/card';
 import {MatListModule} from '@angular/material/list';
 import {MatSelectModule} from '@angular/material/select';
 import {MatNativeDateModule} from '@angular/material/core';
-
+import { SignupComponent } from './signup/signup.component';
+import {FormsModule} from '@angular/forms';
 @NgModule({
   declarations: [
     NavMenuComponent,
+    SignupComponent,
     AddSiniestroComponent,
     EditSiniestroComponent,
     ViewSiniestroComponent,
@@ -44,10 +46,12 @@ import {MatNativeDateModule} from '@angular/material/core';
     MatCardModule,
     MatListModule,
     MatSelectModule,
-    MatNativeDateModule
+    MatNativeDateModule,
+    FormsModule
   ],
   exports: [
     NavMenuComponent,
+    SignupComponent,
     EditSiniestroComponent,
     ViewSiniestroComponent,
     ListSiniestroComponent,
