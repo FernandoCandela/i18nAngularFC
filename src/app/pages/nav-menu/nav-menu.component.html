@@ -1,4 +1,46 @@
-<header>
+<header class="p-3 text-bg-dark">
+  <div class="container">
+    <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+      <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+        <i  class="fa-solid fa-building-lock fa-3x"></i>
+      </a>
+
+      <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+        <li><a href="#" class="nav-link px-2 text-white">Home</a></li>
+        <li><a href="#" class="nav-link px-2 text-white">Features</a></li>
+        <li><a [routerLink]="['/list']" class="nav-link px-2 text-white" translate>nav.siniestro</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link px-2 text-white dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" translate>
+            nav.pais
+          </a>
+          <ul class="dropdown-menu dropdown-menu-dark">
+            <li><a class="dropdown-item" (click)="changeLang('es')" translate>nav.peru</a></li>
+            <li><a class="dropdown-item"  (click)="changeLang('en')">EEUU</a></li>
+          </ul>
+        </li>
+        <li><a href="#" class="nav-link px-2 text-white">About</a></li>
+      </ul>
+
+      <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
+        <input type="search" class="form-control form-control-dark text-bg-dark" placeholder="Search..." aria-label="Search">
+      </form>
+      <div class="dropdown  text-end">
+        <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+          <img src="https://github.com/mdo.png" alt="" width="32" height="32" class="rounded-circle me-2">
+          <strong>User</strong>
+        </a>
+        <ul class="dropdown-menu dropdown-menu-dark text-small shadow" style="">
+          <li><a class="dropdown-item" href="#">New project...</a></li>
+          <li><a class="dropdown-item" href="#">Settings</a></li>
+          <li><a class="dropdown-item" href="#">Profile</a></li>
+          <li><hr class="dropdown-divider"></li>
+          <li><a class="dropdown-item" href="#">Sign out</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</header>
+<!-- <header>
     <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
       <div class="container">
         <a class="navbar-brand" [routerLink]="['/']">AVLA PERU</a>
@@ -13,7 +55,7 @@
             </li>
             <div class="dropdown ms-3">
                 <button class="btn btn-bd-light dropdown-toggle" id="bd-versions" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static">
-                  <span class="d-none d-lg-inline" translate>nav.pais</span> 
+                  <span class="d-none d-lg-inline" translate>nav.pais</span>
                 </button>
                 <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="bd-versions">
                   <li><a class="dropdown-item current" aria-current="true"(click)="changeLang('es')" translate>nav.peru</a></li>
@@ -25,4 +67,4 @@
         </div>
       </div>
     </nav>
-  </header>
+  </header> -->
