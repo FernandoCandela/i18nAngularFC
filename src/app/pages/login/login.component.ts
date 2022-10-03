@@ -25,7 +25,7 @@ export class LoginComponent implements OnInit {
       password: this.password
     }
     Auth.signIn(credentials).then( data => {
-      this.router.navigate(['/create']);
+      this.router.navigate(['/profile']);
     })
     .catch(err => {
       alert(err.message || JSON.stringify(err));

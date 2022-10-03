@@ -23,6 +23,7 @@ import {MatNativeDateModule} from '@angular/material/core';
 import { SignupComponent } from './signup/signup.component';
 import {FormsModule} from '@angular/forms';
 import { LoginComponent } from './login/login.component';
+import { ProfileComponent } from './profile/profile.component';
 @NgModule({
   declarations: [
     NavMenuComponent,
@@ -31,7 +32,8 @@ import { LoginComponent } from './login/login.component';
     EditSiniestroComponent,
     ViewSiniestroComponent,
     ListSiniestroComponent,
-    LoginComponent
+    LoginComponent,
+    ProfileComponent
   ],
   imports: [
     CommonModule,
@@ -57,7 +59,8 @@ import { LoginComponent } from './login/login.component';
     EditSiniestroComponent,
     ViewSiniestroComponent,
     ListSiniestroComponent,
-    LoginComponent
+    LoginComponent,
+    ProfileComponent
   ],
 })
 export class PagesModule {}
