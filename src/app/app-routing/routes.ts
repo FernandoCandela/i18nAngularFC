@@ -6,15 +6,16 @@ import { EditSiniestroComponent } from '../pages/siniestros/edit-siniestro/edit-
 import { SignupComponent } from '../pages/signup/signup.component';
 import { LoginComponent } from '../pages/login/login.component';
 import { ProfileComponent } from '../pages/profile/profile.component';
-import { AuthGuard } from '../guards/auth.guard';
+import { AuthGuard } from '../auth/auth-guard.guard';
+import { ProfileGuardGuard } from '../auth/profile-guard.guard';
 
 export const routes: Routes = [
-  { path: 'login', component: LoginComponent },
-  { path: 'profile', component: ProfileComponent },
-  { path: 'signup', component: SignupComponent },
-  { path: 'create', component: AddSiniestroComponent},
-  { path: 'view/:id', component: ViewSiniestroComponent},
-  { path: 'list', component: ListSiniestroComponent },
-  { path: 'edit/:id', component: EditSiniestroComponent},
+  { path: 'login', component: LoginComponent, canActivate: [AuthGuard] },
+  { path: 'profile', component: ProfileComponent, canActivate:[ProfileGuardGuard] },
+  { path: 'signup', component: SignupComponent, canActivate: [AuthGuard]  },
+  { path: 'create', component: AddSiniestroComponent, canActivate:[ProfileGuardGuard]},
+  { path: 'view/:id', component: ViewSiniestroComponent, canActivate:[ProfileGuardGuard]},
+  { path: 'list', component: ListSiniestroComponent, canActivate:[ProfileGuardGuard] },
+  { path: 'edit/:id', component: EditSiniestroComponent, canActivate:[ProfileGuardGuard]},
   {path: '**', redirectTo: '/login', pathMatch: 'full'}
 ];
