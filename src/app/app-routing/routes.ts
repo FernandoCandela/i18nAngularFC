@@ -6,14 +6,15 @@ import { EditSiniestroComponent } from '../pages/siniestros/edit-siniestro/edit-
 import { SignupComponent } from '../pages/signup/signup.component';
 import { LoginComponent } from '../pages/login/login.component';
 import { ProfileComponent } from '../pages/profile/profile.component';
+import { AuthGuard } from '../guards/auth.guard';
 
 export const routes: Routes = [
-  { path: 'create', component: AddSiniestroComponent },
   { path: 'login', component: LoginComponent },
   { path: 'profile', component: ProfileComponent },
   { path: 'signup', component: SignupComponent },
-  { path: 'view/:id', component: ViewSiniestroComponent },
+  { path: 'create', component: AddSiniestroComponent},
+  { path: 'view/:id', component: ViewSiniestroComponent},
   { path: 'list', component: ListSiniestroComponent },
-  { path: 'edit/:id', component: EditSiniestroComponent },
+  { path: 'edit/:id', component: EditSiniestroComponent},
   {path: '**', redirectTo: '/login', pathMatch: 'full'}
 ];
