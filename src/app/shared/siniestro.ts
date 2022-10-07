@@ -8,4 +8,5 @@ export class Siniestro {
   estimacion!: number;
   tipo!: string;
   bienes!: Bien[];
+  usernameMod!: string;
 }
